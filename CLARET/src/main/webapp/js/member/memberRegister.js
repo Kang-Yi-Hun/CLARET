@@ -1,17 +1,17 @@
 $(document).ready(function() {
-	
+   
 
-	
+   
 });
 
 
 
 // === "우편번호 찾기" 버튼 클릭 이벤트 === //
 function searchPostcode() {
-		
-	new daum.Postcode({
-		oncomplete: function(data) {
-			// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+      
+   new daum.Postcode({
+      oncomplete: function(data) {
+         // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
     
             // 각 주소의 노출 규칙에 따라 주소를 조합한다.
             // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
@@ -54,16 +54,17 @@ function searchPostcode() {
             document.getElementById("detailAddress").focus();
             
         }
-    }).open();   			
+    }).open();            
 } // end of function searchPostcode() {}
 
 
 // === "가입하기" 버튼 클릭 이벤트 === //
 function goRegister() {
 
-	const frm = document.registerFrm;   
-	frm.action = "memberRegister.up";
-	frm.method = "post";
-	frm.submit();
-	
+   const frm = document.registerFrm; 
+   console.log(frm);
+   frm.action = "memberRegister.up";
+   frm.method = "post";
+   frm.submit();
+   
 } // end of function goRegister() {}

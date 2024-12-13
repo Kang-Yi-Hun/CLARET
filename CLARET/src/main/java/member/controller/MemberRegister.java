@@ -15,12 +15,13 @@ public class MemberRegister extends AbstractController {
 	
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
+		
 		String method = request.getMethod();
 		System.out.println(method);
 		
 		if ("GET".equalsIgnoreCase(method)) {
 			// GET 방식이면 페이지 이동 안되게
+		//	super.setRedirect(false);
 			super.setViewPage("/WEB-INF/member/memberRegister.jsp");	
 		} else {
 			// POST 방식일 때만 회원가입 가능
@@ -61,7 +62,7 @@ public class MemberRegister extends AbstractController {
 				
 				if (n == 1) {	
 					message = "회원가입 성공";
-					loc = request.getContextPath()  + "/index.up";	// 시작페이지로 이동한다. (돌아갈 페이지가 JSP라서 request.getContextPath() 필요)			
+					loc = request.getContextPath()  + "/index.cl";	// 시작페이지로 이동한다. (돌아갈 페이지가 JSP라서 request.getContextPath() 필요)			
 				}
 				
 			} catch (SQLException e) {
