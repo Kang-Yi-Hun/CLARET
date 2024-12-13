@@ -94,3 +94,7 @@ hs_err_pid*
 replay_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/java,eclipse
+##### commit 제외파일 #####
+/CLARET/src/main/webapp/WEB-INF/Command.properties
+/CLARET/src/main/java/common/controller
+/CLARET/src/main/webapp/WEB-INF/web.xml
