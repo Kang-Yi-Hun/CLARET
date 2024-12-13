@@ -14,6 +14,6 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 
-
+<section style="width: 100%; height: 100vw;"></section>
 
 <jsp:include page="footer.jsp"></jsp:include>
